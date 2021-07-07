@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC, memo, useState } from 'react';
+import { Button, TextField } from '@material-ui/core';
+import { Container } from 'Styles';
+import { useDispatch } from 'react-redux';
+import { searchGithubRepositories } from 'Store/Actions/thunks';
 
-function App() {
+const App: FC = () => {
+  const dispatch = useDispatch();
+  const [keyword, setKeyword] = useState<string>();
+
+  const submitForm = () => {
+    if (keyword) {
+      dispatch(searchGithubRepositories(keyword));
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1 style={{ textAlign: 'center' }}>SonarQube Github Search Engine</h1>
+      <Container>
+        <TextField label="Repository Name" value={keyword} onChange={(event) => setKeyword(event.target.value)} />
+        <Button variant="contained" color="primary" onClick={submitForm}>
+          Search
+        </Button>
+      </Container>
+    </>
   );
-}
+};
 
-export default App;
+export default memo(App);
