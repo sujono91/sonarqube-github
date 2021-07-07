@@ -1,4 +1,4 @@
-import { RepositorySearch } from "Models";
+import { RepositorySearch } from 'Models';
 
 export const MockRepositorySearch: RepositorySearch = {
   totalCount: 3,

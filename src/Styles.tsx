@@ -19,7 +19,7 @@ export const Content = styled.div<{
   width: 80%;
   margin: auto;
   display: flex;
-  justify-content: ${props => props.isLoading ? 'center' : 'space-between'};
+  justify-content: ${(props) => props.isLoading ? 'center' : 'space-between'};
   align-items: center;
   flex-wrap: wrap;
 `;
