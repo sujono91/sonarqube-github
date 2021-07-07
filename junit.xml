@@ -1,0 +1,6 @@
+<testsuites name="jest tests" tests="1" failures="0" time="6.363">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2021-07-07T12:37:59" time="3.667" tests="1">
+    <testcase classname=" renders learn react link" name=" renders learn react link" time="0.021">
+    </testcase>
+  </testsuite>
+</testsuites>
