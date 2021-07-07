@@ -1,6 +1,20 @@
-<testsuites name="jest tests" tests="1" failures="0" time="2.519">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2021-07-07T12:39:07" time="1.41" tests="1">
-    <testcase classname=" renders learn react link" name=" renders learn react link" time="0.02">
+<testsuites name="jest tests" tests="6" failures="0" time="21.331">
+  <testsuite name="Employee Reducer Spec" errors="0" failures="0" skipped="0" timestamp="2021-07-07T14:30:13" time="6.143" tests="4">
+    <testcase classname="Employee Reducer Spec should return default state" name="Employee Reducer Spec should return default state" time="0.003">
+    </testcase>
+    <testcase classname="Employee Reducer Spec should handle fetch request" name="Employee Reducer Spec should handle fetch request" time="0.001">
+    </testcase>
+    <testcase classname="Employee Reducer Spec should handle fail request" name="Employee Reducer Spec should handle fail request" time="0">
+    </testcase>
+    <testcase classname="Employee Reducer Spec should fetch repositories successfully" name="Employee Reducer Spec should fetch repositories successfully" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2021-07-07T14:30:13" time="6.149" tests="1">
+    <testcase classname=" should set the root reducer" name=" should set the root reducer" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="Thunk Spec" errors="0" failures="0" skipped="0" timestamp="2021-07-07T14:30:13" time="9.774" tests="1">
+    <testcase classname="Thunk Spec should handle fetch repositories" name="Thunk Spec should handle fetch repositories" time="3.374">
     </testcase>
   </testsuite>
 </testsuites>

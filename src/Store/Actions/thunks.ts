@@ -5,13 +5,13 @@ import { RepositorySearch } from 'Models';
 import ENDPOINT from 'Constants/Endpoint';
 import { toCamelCase } from 'Utils/CaseConvert';
 
-export const searchGithubRepositories = (keyword: string) => async (
+export const searchGithubRepositories = (keyword: string, page: number) => async (
   dispatch: Dispatch
 ) => {
   dispatch(actions.fetchRepositories.request());
 
   try {
-    const response = await Axios.get(`${ENDPOINT.GITHUB_SEARCH}?q=${keyword}`);
+    const response = await Axios.get(`${ENDPOINT.GITHUB_SEARCH}?q=${keyword}&page=${page}`);
 
     dispatch(actions.fetchRepositories.success(toCamelCase(response.data) as RepositorySearch));
 

@@ -41,6 +41,7 @@ const reducer = (state = defaultState, action: Action): State => {
     case getType(actions.fetchRepositories.failure): {
       return {
         ...state,
+        error: action.payload,
         items: [],
         totalCount: 0,
         isLoading: false
